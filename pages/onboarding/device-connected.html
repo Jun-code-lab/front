@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>연동 완료 - 치톤피드</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/base/reset.css">
+    <link rel="stylesheet" href="../../css/base/variables.css">
+    <link rel="stylesheet" href="../../css/base/typography.css">
+    <link rel="stylesheet" href="../../css/components/buttons.css">
+    <link rel="stylesheet" href="../../css/pages/onboarding.css">
+    <link rel="stylesheet" href="../../css/mobile.css">
+</head>
+
+<body>
+    <div class="onboarding-page device-connected-page">
+        <!-- Main Content -->
+        <div class="onboarding-content centered">
+            <!-- Success Icon -->
+            <div class="success-check-icon">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="38" stroke="#28B447" stroke-width="4"/>
+                    <path d="M25 40L35 50L55 30" stroke="#28B447" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <!-- Title -->
+            <h1 class="connected-title">치피 화분이 등록되었어요!</h1>
+
+            <!-- Description -->
+            <div class="connected-description">
+                <p>이제 치피를 통해 실시간으로</p>
+                <p>식물 상태를 분석할 수 있어요</p>
+            </div>
+        </div>
+
+        <!-- Bottom Actions -->
+        <div class="onboarding-actions">
+            <button class="btn btn-outline-primary" onclick="handleNext()">
+                식물 정보 등록하기
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function handleNext() {
+            // Navigate to plant register page
+            window.location.href = 'plant-register.html';
+        }
+    </script>
+</body>
+
+</html>

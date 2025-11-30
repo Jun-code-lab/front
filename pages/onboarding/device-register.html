@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>기기 등록 - 치톤피드</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/base/reset.css">
+    <link rel="stylesheet" href="../../css/base/variables.css">
+    <link rel="stylesheet" href="../../css/base/typography.css">
+    <link rel="stylesheet" href="../../css/components/buttons.css">
+    <link rel="stylesheet" href="../../css/components/cards.css">
+    <link rel="stylesheet" href="../../css/pages/onboarding.css">
+    <link rel="stylesheet" href="../../css/mobile.css">
+</head>
+
+<body>
+    <div class="onboarding-page device-register-page">
+        <!-- Main Content -->
+        <div class="onboarding-content centered">
+            <!-- QR Camera Card -->
+            <div class="device-register-card">
+                <!-- Title Section Inside Card -->
+                <div class="device-register-header">
+                    <h1 class="device-register-title">기기 등록</h1>
+                    <p class="device-register-description">기기가 연결될 때까지 촬영해 주세요.</p>
+                </div>
+
+                <!-- QR Camera Section -->
+                <div class="qr-camera-section">
+                    <h2 class="qr-camera-title">카메라 QR 등록</h2>
+                    <div class="qr-scanner-box">
+                        <button class="btn-camera" onclick="openCamera()">
+                            <svg class="camera-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23 19C23 19.5304 22.7893 20.0391 22.4142 20.4142C22.0391 20.7893 21.5304 21 21 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8C1 7.46957 1.21071 6.96086 1.58579 6.58579C1.96086 6.21071 2.46957 6 3 6H7L9 3H15L17 6H21C21.5304 6 22.0391 6.21071 22.4142 6.58579C22.7893 6.96086 23 7.46957 23 8V19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13C8 15.2091 9.79086 17 12 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="camera-text">QR 촬영하기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Actions -->
+        <div class="onboarding-actions">
+            <button class="btn btn-primary" onclick="handleRegister()">
+                기기 등록하기
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function openCamera() {
+            // TODO: Open camera for QR scanning
+            // For now, navigate to device connected page after simulated scan
+            alert('QR 카메라를 실행합니다...');
+
+            // Simulate scanning delay
+            setTimeout(function() {
+                window.location.href = 'device-connected.html';
+            }, 1000);
+        }
+
+        function handleRegister() {
+            // Navigate to device connected page
+            window.location.href = 'device-connected.html';
+        }
+    </script>
+</body>
+
+</html>

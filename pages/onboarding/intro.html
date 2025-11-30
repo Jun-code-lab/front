@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>환영합니다 - 치톤피드</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Maplestory Font -->
+    <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapleStory Bold.woff" rel="preload" as="font" type="font/woff" crossorigin>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/base/reset.css">
+    <link rel="stylesheet" href="../../css/base/variables.css">
+    <link rel="stylesheet" href="../../css/base/typography.css">
+    <link rel="stylesheet" href="../../css/components/buttons.css">
+    <link rel="stylesheet" href="../../css/pages/onboarding.css">
+    <link rel="stylesheet" href="../../css/mobile.css">
+</head>
+
+<body>
+    <div class="onboarding-page onboarding-intro">
+        <!-- Main Content -->
+        <div class="onboarding-content centered">
+            <!-- Character -->
+            <div class="intro-character">
+                <img src="../../images/chipi/chipi-happy1.png" alt="치피 캐릭터">
+            </div>
+
+            <!-- Welcome Text -->
+            <div class="intro-text">
+                <div class="intro-text-initial">
+                    <h1 class="intro-title">안녕하세요!</h1>
+                    <p class="intro-description">저는 치톤피드의 요정 치치예요</p>
+                </div>
+                <div class="intro-text-next" style="display: none;">
+                    <p class="intro-description" style="white-space: nowrap; display: block;">먼저 앞으로 함께 키워갈 치피를 등록해보아요!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Actions -->
+        <div class="onboarding-actions">
+            <button class="btn btn-primary" onclick="handleNext()">
+                시작하기
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Text transition after 2.5 seconds
+        setTimeout(function() {
+            const initialText = document.querySelector('.intro-text-initial');
+            const nextText = document.querySelector('.intro-text-next');
+
+            // Fade out initial text
+            initialText.style.transition = 'opacity 0.5s ease-out';
+            initialText.style.opacity = '0';
+
+            // After fade out, hide initial and show next text
+            setTimeout(function() {
+                initialText.style.display = 'none';
+                nextText.style.display = 'block';
+                nextText.style.opacity = '0';
+
+                // Fade in next text
+                setTimeout(function() {
+                    nextText.style.transition = 'opacity 0.5s ease-in';
+                    nextText.style.opacity = '1';
+                }, 50);
+            }, 500);
+        }, 2500);
+
+        function handleNext() {
+            // Navigate to next onboarding page
+            window.location.href = 'device-register.html';
+        }
+    </script>
+</body>
+
+</html>

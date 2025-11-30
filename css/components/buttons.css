@@ -1,0 +1,84 @@
+/* Button Styles */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-target-min);
+  padding: 0 var(--spacing-lg);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Primary Button (Green) */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  height: clamp(44px, 7vh, 56px);
+  width: 100%;
+}
+
+.btn-primary:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+/* Google Login Button */
+.btn-google {
+  background-color: var(--color-bg-white);
+  color: var(--color-text-dark);
+  height: clamp(44px, 7vh, 56px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-google:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
+.btn-google img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: var(--color-bg-white);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:active {
+  background-color: var(--color-bg-card);
+}
+
+/* Text Link Button */
+.btn-link {
+  background: none;
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+  padding: var(--spacing-sm);
+  min-height: auto;
+}
+
+.btn-link:active {
+  color: var(--color-text-primary);
+}
+
+/* Disabled State */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

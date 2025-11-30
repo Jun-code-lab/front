@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>식물 정보 등록 - 치톤피드</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/base/reset.css">
+    <link rel="stylesheet" href="../../css/base/variables.css">
+    <link rel="stylesheet" href="../../css/base/typography.css">
+    <link rel="stylesheet" href="../../css/components/buttons.css">
+    <link rel="stylesheet" href="../../css/components/cards.css">
+    <link rel="stylesheet" href="../../css/pages/onboarding.css">
+    <link rel="stylesheet" href="../../css/mobile.css">
+</head>
+
+<body>
+    <div class="onboarding-page plant-register-page">
+        <!-- Main Content -->
+        <div class="plant-register-container">
+            <!-- Plant Selection Card -->
+            <div class="plant-selection-card">
+                <!-- Title Section - Inside Card -->
+                <div class="plant-register-header">
+                    <h1 class="plant-register-title">식물 정보 등록하기</h1>
+                    <p class="plant-register-description">앞으로 집사 서비와 함께 할 식물 키트를 등록해주세요</p>
+                </div>
+
+                <h2 class="plant-section-title">식물 검색하기</h2>
+
+                <!-- Search Input -->
+                <div class="plant-search-box">
+                    <input type="text" class="plant-search-input" placeholder="식물 이름을 검색해주세요">
+                </div>
+
+                <!-- Plant Grid -->
+                <div class="plant-grid">
+                    <!-- Basil -->
+                    <div class="plant-item" data-plant="basil" onclick="selectPlant('basil')">
+                        <div class="plant-image-box">
+                            <span class="plant-icon">🌿</span>
+                        </div>
+                        <p class="plant-name">바질</p>
+                    </div>
+
+                    <!-- Arugula -->
+                    <div class="plant-item" data-plant="arugula" onclick="selectPlant('arugula')">
+                        <div class="plant-image-box">
+                            <span class="plant-icon">🥬</span>
+                        </div>
+                        <p class="plant-name">루꼴라</p>
+                    </div>
+
+                    <!-- Dill -->
+                    <div class="plant-item" data-plant="dill" onclick="selectPlant('dill')">
+                        <div class="plant-image-box">
+                            <span class="plant-icon">🌾</span>
+                        </div>
+                        <p class="plant-name">딜</p>
+                    </div>
+
+                    <!-- Peppermint -->
+                    <div class="plant-item" data-plant="peppermint" onclick="selectPlant('peppermint')">
+                        <div class="plant-image-box">
+                            <span class="plant-icon">🌱</span>
+                        </div>
+                        <p class="plant-name">페퍼민트</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedPlant = null;
+
+        function selectPlant(plantType) {
+            // Remove previous selection
+            const allItems = document.querySelectorAll('.plant-item');
+            allItems.forEach(item => item.classList.remove('selected'));
+
+            // Add selection to clicked item
+            const selectedItem = document.querySelector(`[data-plant="${plantType}"]`);
+            selectedItem.classList.add('selected');
+
+            selectedPlant = plantType;
+
+            // Show next button or navigate
+            setTimeout(function() {
+                alert(`${getPlantName(plantType)}을(를) 선택했습니다!`);
+                window.location.href = 'chipi-birth.html';
+            }, 300);
+        }
+
+        function getPlantName(plantType) {
+            const names = {
+                'basil': '바질',
+                'arugula': '루꼴라',
+                'dill': '딜',
+                'peppermint': '페퍼민트'
+            };
+            return names[plantType] || plantType;
+        }
+    </script>
+</body>
+
+</html>

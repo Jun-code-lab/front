@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>치피 탄생 - 치톤피드</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/base/reset.css">
+    <link rel="stylesheet" href="../../css/base/variables.css">
+    <link rel="stylesheet" href="../../css/base/typography.css">
+    <link rel="stylesheet" href="../../css/pages/onboarding.css">
+    <link rel="stylesheet" href="../../css/mobile.css">
+</head>
+
+<body>
+    <div class="onboarding-page chipi-birth-page">
+        <!-- Main Content -->
+        <div class="chipi-birth-content">
+            <!-- Text Message -->
+            <div class="chipi-birth-message fade-in">
+                <h1 class="chipi-birth-text">앞으로 우리와 함께할</h1>
+                <h1 class="chipi-birth-text">치피를 불러볼까요?</h1>
+            </div>
+
+            <!-- Character Illustration - Bottom -->
+            <div class="chipi-character-bottom slide-up">
+                <div class="chipi-sprout">
+                    🌱
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Auto transition to chipi greeting page after 2 seconds
+        setTimeout(function() {
+            window.location.href = 'chipi-greeting.html';
+        }, 2000);
+    </script>
+</body>
+
+</html>

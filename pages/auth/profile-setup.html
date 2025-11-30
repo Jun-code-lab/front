@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>프로필 설정 - 치톤피드</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/base/reset.css">
+    <link rel="stylesheet" href="../../css/base/variables.css">
+    <link rel="stylesheet" href="../../css/base/typography.css">
+    <link rel="stylesheet" href="../../css/components/buttons.css">
+    <link rel="stylesheet" href="../../css/components/forms.css">
+    <link rel="stylesheet" href="../../css/pages/auth.css">
+    <link rel="stylesheet" href="../../css/mobile.css">
+</head>
+
+<body>
+    <div class="auth-page">
+        <!-- Header with Logo -->
+        <div class="auth-header">
+            <div class="auth-logo">
+                <img src="../../images/common/logo.png" alt="Chytonpide Logo">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="auth-content profile-setup-content">
+            <!-- Title -->
+            <h1 class="auth-title">프로필 설정</h1>
+
+            <!-- Profile Form Card -->
+            <div class="auth-card">
+                <!-- Profile Image Upload -->
+                <div class="profile-upload">
+                    <label for="profileImage" class="profile-upload-wrapper">
+                        <div class="profile-upload-preview" id="profilePreview">
+                            <span class="profile-upload-placeholder">프로필 이미지</span>
+                        </div>
+                    </label>
+                    <input type="file" id="profileImage" class="profile-upload-input" accept="image/*">
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email" class="form-label">이메일</label>
+                    <input type="email" id="email" class="form-input" placeholder="chytonpide@gmail.com" readonly>
+                </div>
+
+                <!-- Nickname Field -->
+                <div class="form-group">
+                    <label for="nickname" class="form-label">닉네임</label>
+                    <input type="text" id="nickname" class="form-input" placeholder="집사님의 이름을 지어주세요!" maxlength="20">
+                </div>
+
+                <!-- Submit Button -->
+                <div class="auth-submit">
+                    <button class="btn btn-primary" onclick="handleSubmit()">
+                        가입 완료
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bottom Text -->
+            <div class="auth-bottom-text">
+                식물과 함께하는 즐거운 여정을 시작하세요!
+            </div>
+        </div>
+
+        <!-- Character at Bottom -->
+        <div class="auth-character">
+            <img src="../../images/chipi/chipi-happy.png" alt="Chipi Character">
+        </div>
+    </div>
+
+    <script>
+        // Profile image preview
+        document.getElementById('profileImage').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const preview = document.getElementById('profilePreview');
+                    preview.innerHTML = '<img src="' + e.target.result + '" alt="Profile">';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function handleSubmit() {
+            const nickname = document.getElementById('nickname').value.trim();
+
+            if (!nickname) {
+                alert('닉네임을 입력해주세요!');
+                return;
+            }
+
+            // TODO: Save profile data
+            // For now, redirect to onboarding
+            window.location.href = '../onboarding/intro.html';
+        }
+    </script>
+</body>
+
+</html>

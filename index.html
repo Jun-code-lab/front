@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>치톤피드 - Chytonpide</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/base/typography.css">
+    <link rel="stylesheet" href="css/pages/splash.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <div class="splash-page">
+        <!-- Logo -->
+        <div class="splash-logo">
+            <img src="images/common/logo.png" alt="Chytonpide Logo">
+        </div>
+
+        <!-- Character -->
+        <div class="splash-character">
+            <img src="images/chipi/chipi-happy.png" alt="Chipi Character">
+        </div>
+    </div>
+
+    <!-- Auto redirect after 2 seconds -->
+    <script>
+        setTimeout(function() {
+            window.location.href = 'pages/auth/login.html';
+        }, 2000);
+    </script>
+</body>
+</html>

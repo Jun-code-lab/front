@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>로그인 - 치톤피드</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/base/reset.css">
+    <link rel="stylesheet" href="../../css/base/variables.css">
+    <link rel="stylesheet" href="../../css/base/typography.css">
+    <link rel="stylesheet" href="../../css/components/buttons.css">
+    <link rel="stylesheet" href="../../css/pages/auth.css">
+    <link rel="stylesheet" href="../../css/mobile.css">
+</head>
+<body>
+    <div class="auth-page">
+        <!-- Header with Logo -->
+        <div class="auth-header">
+            <div class="auth-logo">
+                <img src="../../images/common/logo.png" alt="Chytonpide Logo">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="auth-content">
+            <!-- Google Login Button -->
+            <div class="auth-login-btn">
+                <button class="btn btn-google" onclick="handleGoogleLogin()">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M19.8 10.2273C19.8 9.51818 19.7364 8.83636 19.6182 8.18182H10.2V12.05H15.5818C15.3364 13.3 14.5909 14.3591 13.4636 15.0682V17.5773H16.7727C18.7182 15.8364 19.8 13.2727 19.8 10.2273Z" fill="#4285F4"/>
+                        <path d="M10.2 20C12.9 20 15.1682 19.1045 16.7727 17.5773L13.4636 15.0682C12.5227 15.6682 11.3227 16.0227 10.2 16.0227C7.59091 16.0227 5.38182 14.2636 4.54091 11.9H1.11364V14.4909C2.70909 17.6591 6.20909 20 10.2 20Z" fill="#34A853"/>
+                        <path d="M4.54091 11.9C4.33636 11.3 4.22727 10.6591 4.22727 10C4.22727 9.34091 4.34545 8.7 4.54091 8.1V5.50909H1.11364C0.404545 6.90909 0 8.40909 0 10C0 11.5909 0.404545 13.0909 1.11364 14.4909L4.54091 11.9Z" fill="#FBBC05"/>
+                        <path d="M10.2 3.97727C11.4409 3.97727 12.5545 4.40909 13.4273 5.23636L16.3636 2.3C15.1636 1.18182 12.9 0 10.2 0C6.20909 0 2.70909 2.34091 1.11364 5.50909L4.54091 8.1C5.38182 5.73636 7.59091 3.97727 10.2 3.97727Z" fill="#EA4335"/>
+                    </svg>
+                    구글로 시작하기
+                </button>
+            </div>
+        </div>
+
+        <!-- Character at Bottom -->
+        <div class="auth-character">
+            <img src="../../images/chipi/chipi-happy.png" alt="Chipi Character">
+        </div>
+    </div>
+
+    <script>
+        function handleGoogleLogin() {
+            // TODO: Implement Google Login
+            // For now, redirect to profile setup
+            window.location.href = 'profile-setup.html';
+        }
+    </script>
+</body>
+</html>
