@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>마이페이지 - 치톤피드</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/base/reset.css">
+    <link rel="stylesheet" href="../../css/base/variables.css">
+    <link rel="stylesheet" href="../../css/base/typography.css">
+    <link rel="stylesheet" href="../../css/pages/mypage.css">
+    <link rel="stylesheet" href="../../css/mobile.css">
+</head>
+
+<body>
+    <div class="mypage">
+        <!-- Header -->
+        <header class="mypage-header">
+            <h1 class="page-title">마이페이지</h1>
+            <a href="settings.html" class="settings-btn">
+                <img src="../../images/common/icons/settings.svg" alt="설정">
+            </a>
+        </header>
+
+        <!-- Main Content -->
+        <div class="mypage-content">
+            <!-- Profile Section -->
+            <section class="profile-section">
+                <div class="profile-badge">
+                    <span class="level-text">Level 3</span>
+                    <span class="level-name">치피러버</span>
+                </div>
+
+                <div class="profile-image-container">
+                    <img class="profile-image" src="../../images/chipi/chipi-sprout.png" alt="치피">
+                </div>
+
+                <div class="profile-info">
+                    <div class="nickname-container">
+                        <h2 class="nickname">차차피피</h2>
+                        <a href="#" class="edit-btn">
+                            <img src="../../images/common/icons/edit.svg" alt="수정">
+                        </a>
+                    </div>
+                    <p class="email">user@google.com</p>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-label">식물 수</div>
+                        <div class="stat-value">5</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-label">성장일지 수</div>
+                        <div class="stat-value">52</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recipe Section -->
+            <section class="recipe-section">
+                <h3 class="section-title">바질 활용 레시피</h3>
+
+                <div class="recipe-carousel">
+                    <div class="recipe-track">
+                        <div class="recipe-card">
+                            <img class="recipe-image" src="../../images/mypage/recipe-pasta.jpg" alt="바질 파스타">
+                            <p class="recipe-name">바질 파스타</p>
+                        </div>
+                        <div class="recipe-card">
+                            <img class="recipe-image" src="../../images/mypage/recipe-caprese.jpg" alt="카프레제">
+                            <p class="recipe-name">카프레제</p>
+                        </div>
+                        <div class="recipe-card">
+                            <img class="recipe-image" src="../../images/mypage/recipe-toast.jpg" alt="바질 토스트">
+                            <p class="recipe-name">바질 토스트</p>
+                        </div>
+                        <div class="recipe-card">
+                            <img class="recipe-image" src="../../images/mypage/recipe-salad.jpg" alt="바질 샐러드">
+                            <p class="recipe-name">바질 샐러드</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+            </section>
+
+            <!-- Ad Banner Section -->
+            <section class="ad-section">
+                <div class="ad-banner">
+                    <img class="ad-image" src="../../images/mypage/ad-product.png" alt="광고 배너">
+                </div>
+            </section>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="../diary/list.html" class="nav-item">
+                <img class="nav-icon" src="../../images/common/icons/nav-diary.svg" alt="성장일지">
+                <div class="nav-label">성장일지</div>
+            </a>
+            <a href="../home/day.html" class="nav-item">
+                <img class="nav-icon" src="../../images/common/icons/nav-home.svg" alt="홈">
+                <div class="nav-label">홈</div>
+            </a>
+            <a href="index.html" class="nav-item active">
+                <img class="nav-icon" src="../../images/common/icons/nav-mypage.svg" alt="마이페이지">
+                <div class="nav-label">마이페이지</div>
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

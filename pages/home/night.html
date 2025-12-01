@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>홈 (밤) - 치톤피드</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/base/reset.css">
+    <link rel="stylesheet" href="../../css/base/variables.css">
+    <link rel="stylesheet" href="../../css/base/typography.css">
+    <link rel="stylesheet" href="../../css/pages/home.css">
+    <link rel="stylesheet" href="../../css/mobile.css">
+</head>
+
+<body>
+    <div class="home-page home-night">
+        <!-- Background Image -->
+        <img class="home-background" src="../../images/home/night-background.png" alt="밤 배경">
+
+        <!-- Main Content -->
+        <div class="home-content">
+            <!-- 온도/습도 카드 -->
+            <div class="info-cards">
+                <div class="info-card temp-card">
+                    <div class="card-label">온도</div>
+                    <div class="card-value">
+                        <span class="value-number">24</span>
+                        <span class="value-unit">°C</span>
+                    </div>
+                    <div class="card-status status-good">적당해요</div>
+                </div>
+
+                <div class="info-card humidity-card">
+                    <div class="card-label">습도</div>
+                    <div class="card-value">
+                        <span class="value-number">55</span>
+                        <span class="value-unit">%</span>
+                    </div>
+                    <div class="card-status status-warning">건조해요</div>
+                </div>
+            </div>
+
+            <!-- 물주기/영양제 카드 -->
+            <div class="care-cards">
+                <div class="care-card water-card">
+                    <div class="care-icon">💧</div>
+                    <div class="care-info">
+                        <div class="care-label">물 주기</div>
+                        <div class="care-value">D-3</div>
+                    </div>
+                </div>
+
+                <div class="care-card nutrient-card">
+                    <div class="care-icon">🌿</div>
+                    <div class="care-info">
+                        <div class="care-label">영양제</div>
+                        <div class="care-value">D-10</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 치피 캐릭터 -->
+            <div class="chipi-container">
+                <img class="chipi-character" src="../../images/chipi/chipi-night.png" alt="치피">
+            </div>
+
+            <!-- 조명 컨트롤 카드 -->
+            <div class="light-control-card">
+                <div class="light-header">
+                    <div class="light-icon">🌙</div>
+                    <span class="light-title">식물 성장 조명</span>
+                    <span class="light-status">켜짐</span>
+                </div>
+                <div class="light-buttons">
+                    <button class="light-btn light-btn-on active">ON</button>
+                    <button class="light-btn light-btn-off">OFF</button>
+                    <button class="light-btn light-btn-auto">AUTO</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="../diary/list.html" class="nav-item">
+                <img class="nav-icon" src="../../images/common/icons/nav-diary.svg" alt="성장일지">
+                <div class="nav-label">성장일지</div>
+            </a>
+            <a href="night.html" class="nav-item active">
+                <img class="nav-icon" src="../../images/common/icons/nav-home.svg" alt="홈">
+                <div class="nav-label">홈</div>
+            </a>
+            <a href="../mypage/index.html" class="nav-item">
+                <img class="nav-icon" src="../../images/common/icons/nav-mypage.svg" alt="마이페이지">
+                <div class="nav-label">마이페이지</div>
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>
